@@ -13,11 +13,29 @@ class App extends Component{
     this.state = {
       Task
     }
+    this.handleAddTask = this.handleAddTask.bind(this);
+
+  }
+
+  removeTask(index) {
+    if (window.confirm('Are you sure you want to delete this Task?')){
+    this.setState({
+      Task: this.state.Task.filter((e, i) => {
+        return i !== index
+      })
+    });
+  }
+  }
+
+  handleAddTask(tk) {
+    this.setState({
+      Task: [...this.state.Task, tk]
+    })
   }
   render(){
   const Task = this.state.Task.map((tk, i) => {
     return(
-      <div className="col-md-4">
+      <div className="col-md-4" key={i}>
         <div className="card mt-4">
           <div className="card-header">
               <h3>{ tk.title }</h3>
@@ -28,6 +46,15 @@ class App extends Component{
             <p><mark>{ tk.responsable }</mark></p>
             <p>{ tk.time }</p>
           </div> 
+
+          <div className="card-footer">
+              <button
+                className="btn btn-danger"
+                onClick={this.removeTask.bind(this, i)}>
+                Delete
+              </button>
+           </div>
+
         </div>
       </div>
     )
@@ -47,14 +74,15 @@ class App extends Component{
         <div className="row mt-4">
         <div className="col md-3">
         <img src={logo} className="App-logo" alt="logo" />
-        <TaskForm />
+        <TaskForm onAddTask={this.handleAddTask}/>
           
-         </div>
-         <div className="col md-9">
-         <div className="row">
+          </div>
+          <div className="col md-9">
+          <div className="row">
             {Task}
           </div>
           </div>
+
           </div>
           </div>
      
