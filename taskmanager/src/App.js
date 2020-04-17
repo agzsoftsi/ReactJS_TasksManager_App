@@ -11,18 +11,44 @@ class App extends Component{
   constructor(){
     super();
     this.state = {
-      title: 'Aplicacion  de Tareas',
-      ntareas: 10
+      Task
     }
   }
   render(){
+  const Task = this.state.Task.map((tk, i) => {
+    return(
+      <div className="col-md-4">
+        <div className="card mt-4">
+          <div className="card-header">
+              <h3>{ tk.title }</h3>
+              <span className="badge badge-pill badge-danger ml-2">{tk.priority}</span>
+          </div>
+          <div className="card-body">
+            <p>{ tk.description }</p>
+            <p>{ tk.responsable }</p>
+            <p>{ tk.time }</p>
+          </div> 
+        </div>
+      </div>
+    )
+  })
+
   return (
     <div className="App">
       <nav className="navbar navbar-dark bg-dark">
                 <a href="" className="text-white">
-                    { this.state.title} - { this.state.ntareas }
+                    Tasks
+                    <span className="badge badge-pill badge-light ml-2">
+                      {this.state.Task.length}
+                      </span>
                 </a>
-            </nav>
+      </nav>
+      <div className="container">
+        <div className="row mt-4">
+         {Task}
+        </div>
+      </div>
+      
      
       <img src={logo} className="App-logo" alt="logo" />
        
