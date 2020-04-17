@@ -4,7 +4,9 @@ class Navigation extends Component{
     render() {
         return (
             <nav className="navbar navbar-dark bg-dark">
-                <a href="" className="text-white">Tasks</a>
+                <a href="" className="text-white">
+                    { this.props.dato}
+                </a>
             </nav>
 
         )
