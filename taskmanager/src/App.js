@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Navigation from './components/Navigation'
+import TaskForm from './components/TaskForm'
 //Importamos nuestros datos de task.json
 import { Task } from './Task.json';
 //ver registros del diccionario
@@ -48,6 +48,8 @@ class App extends Component{
          {Task}
         </div>
       </div>
+
+      <TaskForm />
       
      
       <img src={logo} className="App-logo" alt="logo" />
