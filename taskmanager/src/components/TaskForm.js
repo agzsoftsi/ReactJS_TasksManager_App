@@ -14,6 +14,7 @@ class TaskForm extends Component {
        }
 
        this.handleInput = this.handleInput.bind(this);
+       this.handleSubmit = this.handleSubmit.bind(this);
     }
     handleInput(e) {
       const { value, name } = e.target;
