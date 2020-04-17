@@ -10,11 +10,19 @@ import { Task } from './Task.json';
 class App extends Component{
   constructor(){
     super();
+    this.state = {
+      title: 'Aplicacion  de Tareas',
+      ntareas: 10
+    }
   }
   render(){
   return (
     <div className="App">
-      <Navigation dato = "Nav 1"/>
+      <nav className="navbar navbar-dark bg-dark">
+                <a href="" className="text-white">
+                    { this.state.title} - { this.state.ntareas }
+                </a>
+            </nav>
      
       <img src={logo} className="App-logo" alt="logo" />
        
