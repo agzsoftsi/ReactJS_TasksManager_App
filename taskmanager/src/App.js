@@ -25,7 +25,7 @@ class App extends Component{
           </div>
           <div className="card-body">
             <p>{ tk.description }</p>
-            <p>{ tk.responsable }</p>
+            <p><mark>{ tk.responsable }</mark></p>
             <p>{ tk.time }</p>
           </div> 
         </div>
@@ -45,14 +45,19 @@ class App extends Component{
       </nav>
       <div className="container">
         <div className="row mt-4">
-         {Task}
-        </div>
-      </div>
-
-      <TaskForm />
-      
+        <div className="col md-3">
+        <img src={logo} className="App-logo" alt="logo" />
+        <TaskForm />
+          
+         </div>
+         <div className="col md-9">
+         <div className="row">
+            {Task}
+          </div>
+          </div>
+          </div>
+          </div>
      
-      <img src={logo} className="App-logo" alt="logo" />
        
     </div>
   );
