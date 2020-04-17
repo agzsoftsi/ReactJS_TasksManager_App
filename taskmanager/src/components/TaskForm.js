@@ -10,7 +10,7 @@ class TaskForm extends Component {
             responsable : '',
             description : '',
             priority : 'low',
-            time : '0'
+            time : '0 hours'
        };
 
        this.handleInputChange = this.handleInputChange.bind(this);
@@ -30,7 +30,7 @@ class TaskForm extends Component {
             responsible: '',
             description: '',
             priority: 'low',
-            time : '0'
+            time : '0 hours'
           });
       }
 
