@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Navigation extends Component{
-    render() {
+function Navigation(props){
+    
         return (
             <nav className="navbar navbar-dark bg-dark">
                 <a href="" className="text-white">
@@ -9,8 +9,8 @@ class Navigation extends Component{
                 </a>
             </nav>
 
-        )
-    }
+        );
+    
 }
 
 export default Navigation;
