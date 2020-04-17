@@ -5,7 +5,7 @@ class Navigation extends Component{
         return (
             <nav className="navbar navbar-dark bg-dark">
                 <a href="" className="text-white">
-                    { this.props.dato}
+                    Tasks
                 </a>
             </nav>
 

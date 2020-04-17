@@ -7,9 +7,7 @@ function App() {
   return (
     <div className="App">
       <Navigation dato = "Nav 1"/>
-      <Navigation dato = "Nav 2"/>
-      <Navigation dato = "Nav 3"/>
-      <Navigation dato = "Nav 4"/>
+     
       <img src={logo} className="App-logo" alt="logo" />
        
     </div>
