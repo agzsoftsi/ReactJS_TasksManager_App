@@ -36,7 +36,7 @@ class App extends Component{
   const Task = this.state.Task.map((tk, i) => {
     return(
       <div className="col-md-4" key={i}>
-        <div className="card mt-4">
+        <div className="card mt-4 border border-danger">
           <div className="card-header">
               <h3>{ tk.title }</h3>
               <span className="badge badge-pill badge-danger ml-2">{tk.priority}</span>
@@ -72,8 +72,8 @@ class App extends Component{
       </nav>
       <div className="container">
         <div className="row mt-4">
-        <div className="col md-3">
-        <img src={logo} className="App-logo" alt="logo" />
+        <div className="col md-3 border border-danger bg-dark">
+        <img src={logo} className="p-3" alt="logo" />
         <TaskForm onAddTask={this.handleAddTask}/>
           
           </div>
