@@ -44,7 +44,8 @@ class App extends Component{
           <div className="card-body">
             <p>{ tk.description }</p>
             <p><mark>{ tk.responsable }</mark></p>
-            <p>{ tk.time }</p>
+            <p><strong>Start: </strong>{ tk.date1 }</p>
+            <p><strong>End: </strong>{ tk.date2 }</p>
           </div> 
 
           <div className="card-footer">

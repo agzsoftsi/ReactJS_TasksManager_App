@@ -5,28 +5,32 @@
             "responsable" : "Carlos Garcia",
             "description" : "Create React Inteface",
             "priority" : "Medium",
-            "time" : "2 hours"
+            "date1" : "17/04/2020",
+            "date2" : "18/04/2020"
         },
         {
             "title" : "Task 2",
             "responsable" : "Orlando Gomez",
             "description" : "Create localstorage",
             "priority" : "Medium",
-            "time" : "2 hours"
+            "date1" : "18/04/2020",
+            "date2" : "19/04/2020"
         },
         {
             "title" : "Task 3",
             "responsable" : "Ivan Lasso",
             "description" : "Connect app to Json Inteface",
             "priority" : "Medium",
-            "time" : "2 hours"
+            "date1" : "19/04/2020",
+            "date2" : "20/04/2020"
         },
         {
             "title" : "Task 4",
             "responsable" : "Stward Echeverry",
             "description" : "Create tasks for Inteface",
             "priority" : "Medium",
-            "time" : "2 hours"
+            "date1" : "21/04/2020",
+            "date2" : "22/04/2020"
         }
 
 

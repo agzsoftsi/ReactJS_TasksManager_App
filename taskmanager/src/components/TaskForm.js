@@ -10,7 +10,8 @@ class TaskForm extends Component {
             responsable : '',
             description : '',
             priority : 'low',
-            time : '0'
+            date1 : '',
+            date2 : ''
        };
 
        this.handleInputChange = this.handleInputChange.bind(this);
@@ -30,7 +31,8 @@ class TaskForm extends Component {
             responsible: '',
             description: '',
             priority: 'low',
-            time : '0'
+            date1 : '',
+            date2 : ''
           });
       }
 
@@ -46,6 +48,8 @@ class TaskForm extends Component {
                         value={this.state.title}
                         onChange={this.handleInputChange}
                         placeholder="Title"
+                        title="Task Name"
+                        required
                     />
                     </div>
 
@@ -57,6 +61,8 @@ class TaskForm extends Component {
                         value={this.state.responsible}
                         onChange={this.handleInputChange}
                         placeholder="Responsable"
+                        title="Task Responsable"
+                        required
                     />
                     </div>
 
@@ -69,6 +75,8 @@ class TaskForm extends Component {
                         value={this.state.description}
                         onChange={this.handleInputChange}
                         placeholder="Description"
+                        title="Task Description"
+                        required
                     />  
                     </div>
 
@@ -78,6 +86,8 @@ class TaskForm extends Component {
                         className="form-control"
                         value={this.state.priority}
                         onChange={this.handleInputChange}
+                        title="Task Priority"
+                        required
                     >
                         <option>low</option>
                         <option>medium</option>
@@ -88,12 +98,27 @@ class TaskForm extends Component {
 
                     <div className="form-group">
                     <input
-                        type="number"
-                        name="time"
+                        type="date"
+                        name="date1"
                         className="form-control"
-                        value={this.state.time}
+                        value={this.state.date1}
                         onChange={this.handleInputChange}
-                        placeholder="Time"
+                        placeholder="Date Start"
+                        title="Task Starts"
+                        required
+                    />  
+                    </div>
+
+                    <div className="form-group">
+                    <input
+                        type="date"
+                        name="date2"
+                        className="form-control"
+                        value={this.state.date2}
+                        onChange={this.handleInputChange}
+                        placeholder="Date End"
+                        title="Task Ends"
+                        required
                     />  
                     </div>
 
